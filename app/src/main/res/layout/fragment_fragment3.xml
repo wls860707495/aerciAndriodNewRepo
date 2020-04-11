@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vinzee.andriodfragmentexample.View.Fragment3">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/task13"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="词语测试"/>
+    <Button
+        android:id="@+id/task14"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="数字测试"/>
+    <Button
+        android:id="@+id/record_test"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="record_test"/>
+</LinearLayout>
+</FrameLayout>
