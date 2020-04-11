@@ -12,12 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vinzee.andriodfragmentexample.R;
-<<<<<<< HEAD
 
 import UtilsHelper.SharePreferenceUtil;
-=======
-import com.example.vinzee.andriodfragmentexample.Tools.SharePreferenceUtil;
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
 
 public class Task14_2_2Activity extends AppCompatActivity {
@@ -117,7 +113,6 @@ public class Task14_2_2Activity extends AppCompatActivity {
 
     private void submit(final int formNo) {
 //        try {
-<<<<<<< HEAD
         form[formNo].getEdit().setEnabled(false);
         form[formNo].getSubmit().setEnabled(false);
         if (formNo != 7) {
@@ -136,25 +131,6 @@ public class Task14_2_2Activity extends AppCompatActivity {
             Intent intent = new Intent(Task14_2_2Activity.this, Task14_2Activity.class);
             startActivity(intent);
         }
-=======
-            form[formNo].getEdit().setEnabled(false);
-            form[formNo].getSubmit().setEnabled(false);
-            if (formNo != 7) {
-                form[formNo + 1].getPlay().setEnabled(true);
-                Log.i("mm",form[formNo].getEdit().getText().toString());
-                SharePreferenceUtil.setParam(getApplicationContext(), "firgured2" + formNo,
-                        form[formNo].getEdit().getText().toString());
-            } else {
-                SharePreferenceUtil.setParam(getApplicationContext(), "firgured2" + formNo,
-                        form[formNo].getEdit().getText().toString());
-
-                /*   分数在这里  */
-                int m = caculatescors();
-                Toast.makeText(Task14_2_2Activity.this, "测试14_2_2 测试2完成,分数为：" + m, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Task14_2_2Activity.this, Task14_2Activity.class);
-                startActivity(intent);
-            }
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 //        } catch (Exception e) {
 //           Log.i("mmmmm","opipp");//输出异常信息
 //        }
@@ -181,8 +157,4 @@ public class Task14_2_2Activity extends AppCompatActivity {
         }
         return scores;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7

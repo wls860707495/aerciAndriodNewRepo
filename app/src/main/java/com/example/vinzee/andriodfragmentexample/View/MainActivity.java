@@ -15,27 +15,18 @@ import com.example.vinzee.andriodfragmentexample.View.Fragment1;
 import com.example.vinzee.andriodfragmentexample.View.Fragment2;
 import com.example.vinzee.andriodfragmentexample.View.Fragment3;
 
-<<<<<<< HEAD
 //import org.opencv.android.BaseLoaderCallback;
 //import org.opencv.android.LoaderCallbackInterface;
 //import org.opencv.android.OpenCVLoader;
 
 import UtilsHelper.SharePreferenceUtil;
-=======
-import org.opencv.android.BaseLoaderCallback;
-import org.opencv.android.LoaderCallbackInterface;
-import org.opencv.android.OpenCVLoader;
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
 import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity implements Fragment1.Communication {
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -54,25 +45,18 @@ public class MainActivity extends AppCompatActivity implements Fragment1.Communi
                 case R.id.navigation_notifications:
                     PushFragment(new Fragment3(), "语音测试");
                     return true;
-<<<<<<< HEAD
                 case R.id.navigation_statistic:
                     PushFragment(new Fragment4(),"统计测试");
                     return true;
-=======
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
             }
             return false;
         }
     };
-<<<<<<< HEAD
 
-=======
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     @Override
     protected void onResume() {
         super.onResume();
         //load OpenCV engine and init OpenCV library
-<<<<<<< HEAD
 //        if (!OpenCVLoader.initDebug()) {
 //            Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
 //            OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, this, mLoaderCallback);
@@ -99,42 +83,11 @@ public class MainActivity extends AppCompatActivity implements Fragment1.Communi
 //            }
 //        }
 //    };
-=======
-        if (!OpenCVLoader.initDebug()) {
-            Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
-            OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, this, mLoaderCallback);
-        } else {
-            Log.d(TAG, "OpenCV library found inside package. Using it!");
-            mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
-        }
-    }
-    //openCV4Android 需要加载用到
-    private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
-        @Override
-        public void onManagerConnected(int status) {
-            switch (status) {
-                case LoaderCallbackInterface.SUCCESS: {
-                    Log.i(TAG, "OpenCV loaded successfully");
-//                    mOpenCvCameraView.enableView();
-//                    mOpenCvCameraView.setOnTouchListener(ColorBlobDetectionActivity.this);
-                }
-                break;
-                default: {
-                    super.onManagerConnected(status);
-                }
-                break;
-            }
-        }
-    };
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
         SharePreferenceUtil.getSharePreference(getBaseContext());//新加
-=======
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

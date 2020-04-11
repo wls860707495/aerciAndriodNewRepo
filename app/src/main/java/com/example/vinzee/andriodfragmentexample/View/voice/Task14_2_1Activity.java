@@ -12,12 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vinzee.andriodfragmentexample.R;
-<<<<<<< HEAD
 
 import UtilsHelper.SharePreferenceUtil;
-=======
-import com.example.vinzee.andriodfragmentexample.Tools.SharePreferenceUtil;
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
 
 public class Task14_2_1Activity extends AppCompatActivity {
@@ -128,10 +124,7 @@ public class Task14_2_1Activity extends AppCompatActivity {
 
                 /*   分数在这里  */
                 int m = caculatescors();
-<<<<<<< HEAD
                 SharePreferenceUtil.updateInfo("part5",m,this);
-=======
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
                 Toast.makeText(Task14_2_1Activity.this, "测试14_2_1 测试2完成,分数为：" + m, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Task14_2_1Activity.this,Task14_2Activity.class);
                 startActivity(intent);
@@ -162,8 +155,4 @@ public class Task14_2_1Activity extends AppCompatActivity {
         }
         return scores;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7

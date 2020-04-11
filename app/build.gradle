@@ -1,11 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-<<<<<<< HEAD
     compileSdkVersion 29
-=======
-    compileSdkVersion 28
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     defaultConfig {
         applicationId "com.example.vinzee.andriodfragmentexample"
         minSdkVersion 22
@@ -39,10 +35,6 @@ dependencies {+6
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-<<<<<<< HEAD
-=======
-    implementation project(':openCVLibrary349')
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     implementation 'com.mcxiaoke.volley:library:1.0.19'
     implementation 'org.apache.httpcomponents:httpcore:4.4.1'
     implementation 'org.apache.httpcomponents:httpclient:4.3.5'

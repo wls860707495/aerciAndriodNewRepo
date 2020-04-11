@@ -23,11 +23,7 @@ public class Fragment3 extends Fragment {
     private Button task14;
     private Button record_test;
 
-<<<<<<< HEAD
     @Override
-=======
-   @Override
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -61,8 +57,4 @@ public class Fragment3 extends Fragment {
 //            }
 //        });
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7

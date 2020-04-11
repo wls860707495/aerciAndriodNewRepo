@@ -22,31 +22,18 @@ import com.example.vinzee.andriodfragmentexample.View.paint.DrawMode;
 import com.example.vinzee.andriodfragmentexample.View.paint.DrawingBoard;
 import com.hb.dialog.dialog.ConfirmDialog;
 
-<<<<<<< HEAD
 //import org.opencv.android.Utils;
 //import org.opencv.core.Mat;
 //import org.opencv.core.Size;
 //import org.opencv.imgproc.Imgproc;
-=======
-import org.opencv.android.Utils;
-import org.opencv.core.Mat;
-import org.opencv.core.Size;
-import org.opencv.imgproc.Imgproc;
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
 import java.util.ArrayList;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
-<<<<<<< HEAD
 //import static org.opencv.imgproc.Imgproc.INTER_CUBIC;
 //import static org.opencv.imgproc.Imgproc.cvtColor;
 //import static org.opencv.imgproc.Imgproc.resize;
-=======
-import static org.opencv.imgproc.Imgproc.INTER_CUBIC;
-import static org.opencv.imgproc.Imgproc.cvtColor;
-import static org.opencv.imgproc.Imgproc.resize;
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
 
 /**
@@ -262,7 +249,6 @@ public class Fragment1 extends Fragment implements View.OnClickListener {
 
     public String HashCompare(Bitmap Bp1, Bitmap Bp2) {
         //数据定义导入部分
-<<<<<<< HEAD
 //        Mat src1 = new Mat();
 //        Mat dst1 = new Mat();
 //        Mat src2 = new Mat();
@@ -278,23 +264,6 @@ public class Fragment1 extends Fragment implements View.OnClickListener {
 //        //把灰度图图缩成8*8
 //        resize(dst1, dst1, new Size(20, 20), 0, 0, INTER_CUBIC);
 //        resize(dst2, dst2, new Size(20, 20), 0, 0, INTER_CUBIC);
-=======
-        Mat src1 = new Mat();
-        Mat dst1 = new Mat();
-        Mat src2 = new Mat();
-        Mat dst2 = new Mat();
-
-        //读取位图到MAT
-        Utils.bitmapToMat(Bp1, src1);
-        Utils.bitmapToMat(Bp2, src2);
-        //变ARGB变灰度图，四通道变一通道
-
-        cvtColor(src1, dst1, Imgproc.COLOR_BGR2GRAY);
-        cvtColor(src2, dst2, Imgproc.COLOR_BGR2GRAY);
-        //把灰度图图缩成8*8
-        resize(dst1, dst1, new Size(20, 20), 0, 0, INTER_CUBIC);
-        resize(dst2, dst2, new Size(20, 20), 0, 0, INTER_CUBIC);
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
         //核心算法部分
         //这里变成二维数组才可以用Mat.get(row,cul)去获取，二维是因为每个像素点里面可能有很多属性（ARGB）
@@ -310,13 +279,8 @@ public class Fragment1 extends Fragment implements View.OnClickListener {
             int tmp = i * 20;
             for (int j = 0; j < 20; j++) {
                 int tmp1 = tmp + j;
-<<<<<<< HEAD
 //                data1[tmp1] = dst1.get(i, j);
 //                data2[tmp1] = dst2.get(i, j);
-=======
-                data1[tmp1] = dst1.get(i, j);
-                data2[tmp1] = dst2.get(i, j);
->>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
                 arr1[tmp1] = data1[tmp1][0];
                 arr2[tmp1] = data2[tmp1][0];
                 iAvg1 += arr1[tmp1];
