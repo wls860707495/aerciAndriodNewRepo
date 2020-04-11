@@ -76,6 +76,7 @@ public class RecordTestActivity extends AppCompatActivity {
     }
 
     private void play1(){try{
+<<<<<<< HEAD
         mp=MediaPlayer.create(this,R.raw.task);
         mp.start();//开始播放
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
@@ -91,6 +92,23 @@ public class RecordTestActivity extends AppCompatActivity {
     }catch(Exception e){
         e.printStackTrace();//输出异常信息
     }
+=======
+            mp=MediaPlayer.create(this,R.raw.task);
+            mp.start();//开始播放
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    Toast.makeText(RecordTestActivity.this,"第一遍播放结束",Toast.LENGTH_SHORT).show();
+                    start1.setEnabled(true);
+                    submit1.setEnabled(true);
+                }
+            });
+            play1.setEnabled(false);
+            Toast.makeText(RecordTestActivity.this,"开始播放第一遍",Toast.LENGTH_SHORT).show();
+        }catch(Exception e){
+            e.printStackTrace();//输出异常信息
+        }
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     }
 
 
@@ -157,4 +175,8 @@ public class RecordTestActivity extends AppCompatActivity {
     }
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7

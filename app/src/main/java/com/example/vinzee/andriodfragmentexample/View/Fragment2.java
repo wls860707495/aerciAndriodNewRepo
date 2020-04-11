@@ -4,11 +4,17 @@ package com.example.vinzee.andriodfragmentexample.View;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+=======
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,10 +26,13 @@ import com.hb.dialog.dialog.ConfirmDialog;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import UtilsHelper.SharePreferenceUtil;
 
 import static android.content.Context.MODE_PRIVATE;
 
+=======
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
 /**
  * A simple {@link
@@ -39,21 +48,29 @@ public class Fragment2 extends Fragment {
     }
     int checkGrades(long testtime){
         grades = 0;
+<<<<<<< HEAD
         grades += 120 - testtime ;
         if(grades<90)
             grades = 90;
         SharePreferenceUtil.updateInfo("part2",grades,getContext());
 //        Log.e("PRO","保存"+SharePreferenceUtil.GetInfo("part2",getContext()));
         return grades;
+=======
+        return grades += 300 - testtime ;
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     }
 
     int checkErrorGrades(int errorTimes){
         grades = 0;
+<<<<<<< HEAD
 
         grades += 90 - errorTimes*10 ;
         SharePreferenceUtil.updateInfo("part2",grades,getContext());
 //        Log.e("PRO","保存"+SharePreferenceUtil.GetInfo("part2",getContext()));
         return grades;
+=======
+        return grades += 90 - errorTimes*10 ;
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     }
 
     @Override
@@ -67,7 +84,10 @@ public class Fragment2 extends Fragment {
         super.onActivityCreated(savedInstanceState);
         choose();
         final LockView lockView = getActivity().findViewById(R.id.lock_view);
+<<<<<<< HEAD
 
+=======
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
         List<Integer> intList = new ArrayList<>();
         for(int i=0;i<9;i++) {
             intList.add(i);
@@ -127,7 +147,10 @@ public class Fragment2 extends Fragment {
 
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
     }
 
     public static void start(Context context) {
@@ -155,5 +178,8 @@ public class Fragment2 extends Fragment {
         dialog.show();
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 }

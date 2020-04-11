@@ -31,7 +31,10 @@
         <activity android:name=".View.voice.Task13PlayActivity" />
         <activity android:name=".View.voice.Task13Activity" />
         <activity android:name=".View.MainActivity" />
+<<<<<<< HEAD
         <activity android:name="statisticalchart.MainActivity"/>
+=======
+>>>>>>> e25f8d700561f4a808557f60a7e8aad6198fd9a7
 
     </application>
 
