@@ -48,13 +48,13 @@ public class Fragment3 extends Fragment {
             }
         });
 
-        record_test=getView().findViewById(R.id.record_test);
-        record_test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(),RecordTestActivity.class);
-                startActivity(intent);
-            }
-        });
+//        record_test=getView().findViewById(R.id.record_test);
+//        record_test.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getContext(),RecordTestActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

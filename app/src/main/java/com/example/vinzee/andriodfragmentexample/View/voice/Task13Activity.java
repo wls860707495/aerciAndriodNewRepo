@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.vinzee.andriodfragmentexample.Tools.SharePreferenceUtil;
 import com.example.vinzee.andriodfragmentexample.View.Fragment3;
 import com.example.vinzee.andriodfragmentexample.R;
 
@@ -20,6 +21,7 @@ public class Task13Activity extends AppCompatActivity {
     private TextView Task13 = null;
     private Task13bean form[];
     private MediaPlayer mp=null;
+    public int scores = 0;
     int i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,10 +103,18 @@ public class Task13Activity extends AppCompatActivity {
             form[formNo].getSubmit().setEnabled(false);
             if(formNo!=3) {
                 form[formNo + 1].getPlay().setEnabled(true);
+                SharePreferenceUtil.setParam(getApplicationContext(),"word"+formNo,
+                        form[formNo].getEdit().getText().toString());
             }
             else
             {
-                Toast.makeText(Task13Activity.this,"测试13完成",Toast.LENGTH_SHORT).show();
+                SharePreferenceUtil.setParam(getApplicationContext(),"word"+formNo,
+                        form[formNo].getEdit().getText().toString());
+
+                /*   分数在这里  */
+                int m = caculatescors();
+
+                Toast.makeText(Task13Activity.this,"测试13完成,分数："+ m,Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Task13Activity.this, Fragment3.class);
                 startActivity(intent);
             }
@@ -112,5 +122,19 @@ public class Task13Activity extends AppCompatActivity {
         }catch(Exception e){
             e.printStackTrace();//输出异常信息
         }
+    }
+    private int caculatescors() {
+        String s1 = "胳膊猫斧子床飞机耳朵锤子椅子轿车眼睛马刀子钟自行车";
+        String[] s2 = new String[3];
+
+        for (int k = 1; k <= 3; k++) {
+            s2[k - 1] = SharePreferenceUtil.getParam(getApplicationContext(), "word" + k).toString().replace(" ", "");
+        }
+        for (int p = 0; p <= 2; p++) {
+            if (s2[p].equals(s1)) {
+                scores += 10;
+            }
+        }
+        return scores;
     }
 }

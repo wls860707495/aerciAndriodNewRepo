@@ -1,23 +1,26 @@
 package com.example.vinzee.andriodfragmentexample.View.voice;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vinzee.andriodfragmentexample.R;
+import com.example.vinzee.andriodfragmentexample.Tools.SharePreferenceUtil;
 
 
 public class Task14_1_1Activity extends AppCompatActivity {
-
     private TextView Task14_1 = null;
     private Task14_1bean form[];
     private MediaPlayer mp=null;
+    public int scores = 0;
     int i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,10 +117,17 @@ public class Task14_1_1Activity extends AppCompatActivity {
             form[formNo].getSubmit().setEnabled(false);
             if(formNo!=8) {
                 form[formNo + 1].getPlay().setEnabled(true);
+                SharePreferenceUtil.setParam(getApplicationContext(),"firgurez"+formNo,
+                        form[formNo].getEdit().getText().toString());
             }
             else
             {
-                Toast.makeText(Task14_1_1Activity.this,"测试14_1 测试1完成",Toast.LENGTH_SHORT).show();
+                SharePreferenceUtil.setParam(getApplicationContext(),"firgurez"+formNo,
+                        form[formNo].getEdit().getText().toString());
+
+                /*   分数在这里  */
+                int m = caculatescors();
+                Toast.makeText(Task14_1_1Activity.this, "测试14_1_1 测试2完成,分数为：" + m, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Task14_1_1Activity.this,Task14_1Activity.class);
                 startActivity(intent);
             }
@@ -125,5 +135,27 @@ public class Task14_1_1Activity extends AppCompatActivity {
         }catch(Exception e){
             e.printStackTrace();//输出异常信息
         }
+    }
+    private int caculatescors() {
+        String a = "582", b = "6439", c = "42731", d = "619473", e = "5917428", f = "58192647", g = "275862584",h="5274913746";
+        String[] s1 = new String[8];
+        String[] s2 = new String[8];
+        s1[0] = a;
+        s1[1] = b;
+        s1[2] = c;
+        s1[3] = d;
+        s1[4] = e;
+        s1[5] = f;
+        s1[6] = g;
+        s1[7] = h;
+        for (int k = 1; k <= 8; k++) {
+            s2[k - 1] = SharePreferenceUtil.getParam(getApplicationContext(), "firgurez" + k).toString().replace(" ", "");
+        }
+        for (int p = 0; p <= 7; p++) {
+            if (s1[p].equals(s2[p])) {
+                scores += 10;
+            }
+        }
+        return scores;
     }
 }
