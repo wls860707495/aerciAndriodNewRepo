@@ -4,11 +4,9 @@ package com.example.vinzee.andriodfragmentexample.View;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +18,7 @@ import com.hb.dialog.dialog.ConfirmDialog;
 import java.util.ArrayList;
 import java.util.List;
 
-import UtilsHelper.SharePreferenceUtil;
-
-import static android.content.Context.MODE_PRIVATE;
+import com.example.vinzee.andriodfragmentexample.UtilsHelper.SharePreferenceUtil;
 
 
 /**

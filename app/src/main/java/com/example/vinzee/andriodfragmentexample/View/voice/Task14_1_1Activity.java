@@ -1,20 +1,18 @@
 package com.example.vinzee.andriodfragmentexample.View.voice;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vinzee.andriodfragmentexample.R;
 
-import UtilsHelper.SharePreferenceUtil;
+import com.example.vinzee.andriodfragmentexample.UtilsHelper.SharePreferenceUtil;
 
 
 public class Task14_1_1Activity extends AppCompatActivity {

@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.vinzee.andriodfragmentexample.R;
 
-import UtilsHelper.SharePreferenceUtil;
+import com.example.vinzee.andriodfragmentexample.UtilsHelper.SharePreferenceUtil;
 
 
 public class Task14_2_1Activity extends AppCompatActivity {

@@ -1,6 +1,5 @@
-package statisticalchart;
+package com.example.vinzee.andriodfragmentexample.View.statisticalchart;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -11,8 +10,6 @@ import com.example.vinzee.andriodfragmentexample.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import UtilsHelper.SharePreferenceUtil;
 
 public class MainActivity extends FragmentActivity {
 

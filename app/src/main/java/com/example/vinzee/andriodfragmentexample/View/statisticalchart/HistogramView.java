@@ -1,9 +1,7 @@
-package statisticalchart;
+package com.example.vinzee.andriodfragmentexample.View.statisticalchart;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -21,7 +19,7 @@ import android.view.animation.Transformation;
 
 import com.example.vinzee.andriodfragmentexample.R;
 
-import UtilsHelper.SharePreferenceUtil;
+import com.example.vinzee.andriodfragmentexample.UtilsHelper.SharePreferenceUtil;
 
 public class HistogramView extends View {
 

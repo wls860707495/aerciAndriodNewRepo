@@ -11,17 +11,12 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.vinzee.andriodfragmentexample.R;
-import com.example.vinzee.andriodfragmentexample.View.Fragment1;
-import com.example.vinzee.andriodfragmentexample.View.Fragment2;
-import com.example.vinzee.andriodfragmentexample.View.Fragment3;
 
 //import org.opencv.android.BaseLoaderCallback;
 //import org.opencv.android.LoaderCallbackInterface;
 //import org.opencv.android.OpenCVLoader;
 
-import UtilsHelper.SharePreferenceUtil;
-
-import static android.content.ContentValues.TAG;
+import com.example.vinzee.andriodfragmentexample.UtilsHelper.SharePreferenceUtil;
 
 public class MainActivity extends AppCompatActivity implements Fragment1.Communication {
 

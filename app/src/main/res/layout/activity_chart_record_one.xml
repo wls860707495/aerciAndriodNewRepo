@@ -20,7 +20,7 @@
         android:layout_marginTop="50dp"
         android:orientation="vertical" >
 
-        <statisticalchart.HistogramView
+        <com.example.vinzee.andriodfragmentexample.View.statisticalchart.HistogramView
             android:id="@+id/green"
             android:layout_width="match_parent"
             android:layout_height="300dp"

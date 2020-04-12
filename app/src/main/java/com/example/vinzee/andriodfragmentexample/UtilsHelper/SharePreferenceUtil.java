@@ -1,4 +1,4 @@
-package UtilsHelper;
+package com.example.vinzee.andriodfragmentexample.UtilsHelper;
 
 import android.content.Context;
 import android.content.SharedPreferences;

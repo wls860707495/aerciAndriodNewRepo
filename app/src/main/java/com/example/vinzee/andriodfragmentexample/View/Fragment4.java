@@ -11,14 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.vinzee.andriodfragmentexample.R;
-import com.example.vinzee.andriodfragmentexample.View.voice.RecordTestActivity;
-import com.example.vinzee.andriodfragmentexample.View.voice.Task13Activity;
-import com.example.vinzee.andriodfragmentexample.View.voice.Task14Activity;
-
 import java.util.List;
 
-import statisticalchart.MainActivity;
+import com.example.vinzee.andriodfragmentexample.View.statisticalchart.MainActivity;
 
 public class Fragment4 extends Fragment {
     private ViewPager viewPager;
