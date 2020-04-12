@@ -60,6 +60,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener {
     ArrayList<Float> press;
     public Fragment1() {
         // Required empty public constructor
+        Log.i("ff","ss");
     }
 
     @Override
