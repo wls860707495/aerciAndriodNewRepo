@@ -129,6 +129,7 @@ public class DrawingBoard extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        mPaint.setStrokeWidth((int)(getpress(event)*25+0.5));
         final int action = event.getAction() & MotionEvent.ACTION_MASK;
         velocityTracker = VelocityTracker.obtain();
         velocityTracker.addMovement(event);
@@ -142,7 +143,7 @@ public class DrawingBoard extends View {
                 //获取并存储压力
                 pre = getpress(event);
                 storepress(pre);
-                Log.i("press","put down press:"+ press);
+//                Log.i("press","put down press:"+ press);
                 break;
             case MotionEvent.ACTION_MOVE:
                 //画出路径
@@ -154,8 +155,8 @@ public class DrawingBoard extends View {
                 //计算并存储速度
                 velocityTracker.computeCurrentVelocity(1000);
                 storespeed(abs(velocityTracker.getXVelocity()), abs(velocityTracker.getYVelocity()));
-                Log.i("speedx", "move speed:" + velocityTracker.getXVelocity());
-                Log.i("speedy", "move speed:" + velocityTracker.getYVelocity());
+//                Log.i("speedx", "move speed:" + velocityTracker.getXVelocity());
+//                Log.i("speedy", "move speed:" + velocityTracker.getYVelocity());
 
                 break;
 
